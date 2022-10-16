@@ -13,7 +13,7 @@ class EstudianteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class EstudianteRequest extends FormRequest
     {
         return [
             'nombres' => 'required|max:70',
-            'apellidos' => 'required|image|max:1024',
+            'apellidos' => 'required|max:1024',
             'direccion' => 'required|max:2000',
             'telefono' => 'required|max:13',
         ];
